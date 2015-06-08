@@ -1,0 +1,80 @@
+---Data analyses and figure for Alcohol, Stress and Personality Effects on Stress
+
+Veronica Conaway and Tabatha Bowers
+
+Eastern Oregon University
+---
+
+
+Data Preparation
+```{r}
+dat<-read.csv("results.csv.csv")
+
+Structure of data
+str(dat)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+Analysis  What effects the Stroop Error
+
+=======
+Analysis
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+=======
+Analysis
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+summary(lm(dat$Stroop.Error~dat$Condition*dat$Alcohol.Intake))
+
+summary(lm(dat$Stroop.Error~dat$Condition))
+ 
+summary(lm(dat$Stroop.Error~dat$Alcohol.Intake))
+
+summary(lm(dat$Stroop.Error~dat$Stress.Level))
+
+summary(lm(dat$Stroop.Error~dat$Condition*dat$Alcohol.Intake*dat$Stress.Level*dat$BFI.Personality))
+
+summary(lm(dat$Stroop.Error~dat$BFI.Personality))
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+Analysis What does Behavior effect.
+
+summary(lm(dat$Alcohol.Intake~dat$BFI.Personality))
+
+summary(lm(dat$Stress.Level~dat$BFI.Personality))
+=======
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+=======
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+
+Scatter Plots
+plot(dat$Stroop.Error, dat$Condition)
+abline(lm(dat$Stroop.Error ~ dat$Condition))
+
+plot(dat$Stroop.Error,dat$Alcohol.Intake)
+abline(lm(dat$Stroop.Error ~ dat$Alcohol.Intake))
+
+plot(dat$Stroop.Error, dat$Stress.Level)
+abline(lm(dat$Stroop.Error ~ dat$Stress.Level))
+
+plot(dat$Stroop.Error, dat$BFI.Personality)
+abline(lm(dat$Stroop.Error ~ dat$BFI.Personality))
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+plot(dat$Alcohol.Intake, dat$BFI.Personality)
+abline(lm(dat$Alcohol.Intake ~ dat$BFI.Personality))
+
+plot(dat$Stress.Level, dat$BFI.Personality)
+abline(lm(dat$Stress.Level ~ dat$BFI.Personality))
+=======
+
+
+
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+=======
+
+
+
+>>>>>>> 813ce23bac440248a6c02b135ea9ecb6fa3f4bd3
+
